@@ -32,12 +32,6 @@ Template Name: finearts
   		<?php endwhile; endif; ?></a>
   		</div>
   		</div>
-  		
-    <div class="row">
-      <div class="twelvecol">
-   	    <p><?php if (function_exists("pagination")) {pagination($additional_loop->max_num_pages);} ?></p>
-      </div>
-    </div>
 
 </div>
 

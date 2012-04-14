@@ -13,14 +13,13 @@ Template Name: home
 <div class="container">
   <div class="row">
     
-      <div class="twelvecol" id="blog"> 
-      
+      <div class="twelvecol" id="blog">
       <?php
       			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       			$args = array(
       				'category_name' => 'all',
       				'paged' => $paged,
-      				'posts_per_page' => -1,
+      				'posts_per_page' => 30,
       				'orderby' => 'rand'
       			);
       			query_posts($args); ?>
@@ -31,12 +30,6 @@ Template Name: home
   		<?php endwhile; endif; ?></a>
   		</div>
   		</div>
-  		
-    <div class="row">
-      <div class="twelvecol">
-   	    <p><?php if (function_exists("pagination")) {pagination($additional_loop->max_num_pages);} ?></p>
-      </div>
-    </div>
 
 </div>
 

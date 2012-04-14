@@ -22,18 +22,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script src="/wp-content/themes/grad2012/js/jquery.flexslider.js"></script>
   <script src="/wp-content/themes/grad2012/js/portfolio.js"></script>
-  <script src='/wp-content/themes/grad2012/js/jquery.masonry.min.js'></script>  
+  <script src="/wp-content/themes/grad2012/js/jquery.masonry.min.js"></script>  
   <script>
-   $(window).load(function() {
-     $("#page-wrap").masonry({
-        columnWidth: 100, 
-        animate: true, 
-        animationOptions: {
-            duration: 300,
-            queue: false
-        }
+  $(function(){
+    $('.twelvecol#blog').masonry({
+      // options
+      itemSelector : '.box',
+      columnWidth : 100
+      animationOptions: {
+        duration: 400
     });
-   });
+  });
   </script>
   
 </head>
@@ -41,9 +40,8 @@
 <body>
 
 <div class="container">
-
-  <div class="header">
   	<div class="row">
+    	  <div class="header">
   		<div class="twocol">
         <a href="/"><h1>GRAD 2012</h1></a>
   		</div>
